@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                             progressDialog.hide();
                             Toast.makeText(MainActivity.this,"Registered Succesfully",Toast.LENGTH_SHORT).show();
                            // finish();
-                            startActivity(new Intent(getApplicationContext(),Credentials.class));
+                            startActivity(new Intent(getApplicationContext(),CredentialsActivity.class));
 
 
                         }
