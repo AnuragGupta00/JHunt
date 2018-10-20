@@ -77,7 +77,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                             progressDialog.hide();
                             Toast.makeText(RegistrationActivity.this,"Registered Succesfully",Toast.LENGTH_SHORT).show();
                             // finish();
-                            startActivity(new Intent(getApplicationContext(),Credentials.class));
+                            startActivity(new Intent(getApplicationContext(),CredentialsActivity.class));
 
 
                         }

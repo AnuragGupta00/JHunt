@@ -29,76 +29,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-
-        buttonRegister =  (Button) findViewById(R.id.buttonRegister);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewSignin = (TextView) findViewById(R.id.textViewSignin);
-        progressDialog = new ProgressDialog(this);
-        firebaseAuth = FirebaseAuth.getInstance();
-
-
-        buttonRegister.setOnClickListener(this);
-        textViewSignin.setOnClickListener(this);
-    }
-
-    private void registerUser(){
-        String Email = editTextEmail.getText().toString().trim();
-        String password = editTextPassword.getText().toString().trim();
-
-        if(TextUtils. isEmpty(Email))
-        {
-            //email is empty
-            Toast.makeText(this,"Please Enter Email" ,Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if(TextUtils.isEmpty(password))
-        {
-            // password is empty
-            Toast.makeText(this,"Please Enter Password" , Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-
-        Task<AuthResult> authResultTask = firebaseAuth.createUserWithEmailAndPassword(Email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>()
-                {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
-                            progressDialog.setMessage("Registering User...");
-                            progressDialog.show();
-
-                            progressDialog.hide();
-                            Toast.makeText(MainActivity.this,"Registered Succesfully",Toast.LENGTH_SHORT).show();
-                           // finish();
-                            startActivity(new Intent(getApplicationContext(),CredentialsActivity.class));
-
-
-                        }
-                        else
-                        {
-                            Toast.makeText(MainActivity.this,"Failed to register",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-    }
-
-    public void onClick(View view) {
-        if (view == buttonRegister) {
-            registerUser();
-        }
-
-        if (view == textViewSignin) {
-           startActivity(new Intent(this,LoginActivity.class));
-
-        }
-=======
         frameLayout = (FrameLayout)findViewById(R.id.animLay);
         animationDrawable =(AnimationDrawable)frameLayout.getBackground();
         animationDrawable.setEnterFadeDuration(5000);
@@ -114,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 5000);
->>>>>>> ae3f5855d66fd2cd42d0bdf7192d9906bd966c7f
     }
 
 
