@@ -25,7 +25,8 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".Credentials"></activity>
+        <activity android:name=".Credentials" />
+        <activity android:name=".RegistrationActivity"></activity>
     </application>
 
 </manifest>

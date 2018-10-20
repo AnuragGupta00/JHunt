@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/animation_background"
+    android:id="@+id/animLay"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/web_hi_res_512"
+            android:contentDescription="JHicon"
+            android:layout_height="150dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/appname"
+            android:textColor="@android:color/white"
+            android:textSize="90sp"
+            android:textStyle="bold"
+            android:text="JHunt"/>
+    </LinearLayout>
+
+</FrameLayout>
